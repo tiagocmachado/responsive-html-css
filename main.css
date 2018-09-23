@@ -1,0 +1,191 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('assets/images/back.jpg') no-repeat;
+    background-size: cover;
+}
+
+.holder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    max-height: 100%;
+    width: 800px;
+    height: 600px;
+}
+
+.holder img {
+    object-fit: cover;
+    width: 100%;
+    flex: 2;
+}
+
+.title {
+    width: 200px;
+    position: absolute;
+    background: #8856a880;
+    color: #fff;
+    left: -50px;
+    top: 30px;
+    text-transform: uppercase;
+}
+
+.title div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title svg {
+    height: 24px;
+    fill: white;
+    padding: 13px;
+}
+
+.title label {
+    width: calc(100% - 50px);
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    background: white;
+    max-height: 140px;
+}
+
+.ingredients,
+.rating {
+    margin: 20px 0;
+}
+
+.details,
+.ingredients,
+.rating {
+    background: #ffffff;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details {
+    flex: 1;
+    background: #8856a8;
+    color: #ffffff;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+.details svg {
+    height: 50px;
+    fill: #ffffff;
+    margin-bottom: 20px;
+}
+
+.details div {
+    display: flex;
+    flex-direction: column;
+}
+
+.ingredients {
+    flex: 3;
+    justify-content: space-around;
+    min-width: 410px;
+}
+
+.ingredients dl {
+    width: 90%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.ingredients dl:last-child {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ingredients dt {
+    display: inline-flex;
+}
+
+.ingredients dd {
+    color: lightgray;
+    margin-inline-start: 6px;
+    display: inline-flex;
+}
+
+.ingredients .image {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: url('assets/images/back.jpg') no-repeat;
+    background-size: cover;
+}
+
+.rating {
+    flex: 1;
+    justify-content: space-around;
+    border-left: 1px solid lightgray;
+}
+
+.rating svg {
+    fill: #33c1d2;
+    width: 20px;
+    margin: 0 2px;
+}
+
+.rating span:first-child {
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .info {
+        max-height: none;
+        flex: none;
+    }
+
+    .title {
+        left: 0;
+    }
+
+    .details,
+    .ingredients,
+    .rating {
+        min-height: 100px;
+    }
+
+    .ingredients,
+    .rating {
+        padding: 20px 0;
+        margin: 0;
+    }
+
+    .rating {
+        border: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .ingredients {
+        min-width: 100%;
+    }
+
+    .ingredients dl {
+        margin: 15px 0;
+    }
+}
